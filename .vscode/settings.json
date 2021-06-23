@@ -94,5 +94,6 @@
   "C_Cpp_Runner.cCompilerPath": "/usr/bin/gcc",
   "C_Cpp_Runner.cppCompilerPath": "/usr/bin/g++",
   "C_Cpp_Runner.debuggerPath": "/usr/bin/lldb",
-  "C_Cpp_Runner.makePath": "/usr/bin/make"
+  "C_Cpp_Runner.makePath": "/usr/bin/make",
+  "terminal.integrated.automationShell.osx": "zsh"
 }

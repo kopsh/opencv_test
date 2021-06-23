@@ -1,0 +1,27 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment":  [
+                {"name": "PKG_CONFIG_PATH", "value": "/usr/local/opt/opencv@4/lib/pkgconfig"},   // This is a unix-install in the release directory created after the opencv is decompressed. Make sure there is an opencv.pc file in that directory
+                {"name": "CPLUS_INCLUDE_PATH", "value": ":/usr/local/include"},   // This is a unix-install in the release directory created after the opencv is decompressed. Make sure there is an opencv.pc file in that directory
+                // {"name": "DYLD_LIBRARY_PATH", "value": "/usr/local/opencv/build/lib"}   // This is the directory you specified when you compiled opencv make`CMAKE_INSTALL_PREFIX`
+                // {"DYLD_LIBRARY_PATH": "/usr/local/opencv/build/lib"} //This configuration is incorrect!
+            ],
+            "externalConsole": false,         // This switch opens to indicate that a new command line window is opened and the program is running.
+            "MIMode": "lldb",
+            "preLaunchTask": "g++ build active file"         // The contents of this line should be the same as those of the `tasks'->`label'field of the previous file `.vscode/tasks.json'!
+        }
+    ]
+}
